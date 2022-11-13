@@ -9,7 +9,7 @@ The problem appears if two people decided to travel by car and one of them is dr
 
 
 # How it works: 
-I used Arduino Uno board, MQ-3 Alcohol sensor and two led emitting diodes to create a prototype. There is emitting red light if MQ-3 Alcohol sensor detects more alcohol concentration that it is allowed, or if camera can’t detect at least one person, or if camera detects more than 1 person. There is a green light only if alcohol sensor doesn’t detect any alcohol and only one person is detected by camera. If two person tries to swap places, there will be some period of time when no-one will be detected by camera so red light will be activated and you need to pass alcotest once again. The logic is that once you passed the test and car engine started working, nothing should be changed, otherwise car engine stops working and you need to pass test again. 
+I used Arduino Uno board, MQ-3 Alcohol sensor and two led emitting diodes to create a prototype. There is emitting red light if MQ-3 Alcohol sensor detects more alcohol concentration that it is allowed, or if camera can’t detect at least one person, or if camera detects more than 1 person. There is a green light only if alcohol sensor doesn’t detect any alcohol and only one person is detected by camera. If two person tries to swap places, there will be some period of time when no-one will be detected by camera so red light will be activated and you need to pass alcotest once again. The logic is that once you passed the test and car engine started working, nothing should be changed, otherwise car engine stops working and you need to pass test again. Code for this is in main.py file, I wrote all logic there and I used pyfirmata library to control arduino with python code.
 
 # How to run:
 ### Hardware:
@@ -29,4 +29,4 @@ Resistors
 ### Software:
 1)	You need to install [homebrew](https://phoenixnap.com/kb/install-homebrew-on-mac), [opencv](https://docs.opencv.org/4.x/d0/db2/tutorial_macos_install.html), [dlib](https://learnopencv.com/install-dlib-on-macos/). 
 2)	You need to upload standardFirmata code on Arduino uno board.
-3)	You can run faces.py file. 
+3)	You can run main.py file. 
